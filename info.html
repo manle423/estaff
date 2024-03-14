@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estaff</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div>Chọn giấy tờ xác minh</div>
+            <div>
+                <label><input type="radio" name="id_card" value="cccd" checked>Thẻ CCCD</label>
+                <label><input type="radio" name="id_card" value="cmnd">Thẻ CMND</label>
+            </div>
+        </div>
+        <div class="row">
+            <p>Scan mã QR Code trên Thẻ CCCD</p>
+            <p>* Nếu không có vui lòng bỏ qua bước này</p>
+            <button>Scan</button>
+        </div>
+        <div class="row">
+            <div>
+                <p>Số CCCD/CMND</p>
+                <input type="text">
+            </div>
+            <div>
+                <p>Họ tên đầy đủ</p>
+                <input type="text">
+            </div>
+            <div>
+                <p>Chụp mặt trước mặt sau</p>
+                <div>
+                    <div>
+                        <input type="file" id="id-front">
+                        <button>Xoá ảnh</button>
+                    </div>
+                    <div>
+                        <input type="file" id="id-back">
+                        <button>Xoá ảnh</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <p>Ngày tháng năm sinh</p>
+            <input type="date">
+        </div>
+        <div class="row">
+            <p>Giới tính</p>
+            <select name="gender" id="gender">
+                <option value="">Chọn giới tính</option>
+                <option value="1">Nam</option>
+                <option value="2">Nữ</option>
+                <option value="3">Khác</option>
+            </select>
+        </div>
+        <div class="row">
+            <p>Nơi cư trú</p>
+            <input type="text">
+        </div>
+        <div class="row">
+            <p>Tỉnh/Thành phố</p>
+            <select name="province" id="province">
+                <option value="">Chọn Tỉnh/Thành phố</option>
+            </select>
+        </div>
+        <div class="row">
+            <p>Tỉnh/Thành phố</p>
+            <select name="district" id="district">
+                <option value="">Chọn Quận/Huyện/Thành phố</option>
+            </select>
+        </div>
+        <div class="row">
+            <p>Ngày cấp</p>
+            <input type="date">
+        </div>
+        <div class="row">
+            <p>Nơi cấp</p>
+            <input type="text">
+        </div>
+        <div class="row">
+            <p>Tải ảnh lên</p>
+            <input type="file" id="face-photo">
+            <button>Xoá ảnh</button>
+        </div>
+        <a href="work_location_information_and_bank.html">Tiếp tục</a>
+    </div>
+</body>
+
+</html>
