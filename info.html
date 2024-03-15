@@ -5,89 +5,209 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estaff</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div>Chọn giấy tờ xác minh</div>
-            <div>
-                <label><input type="radio" name="id_card" value="cccd" checked>Thẻ CCCD</label>
-                <label><input type="radio" name="id_card" value="cmnd">Thẻ CMND</label>
-            </div>
-        </div>
-        <div class="row">
-            <p>Scan mã QR Code trên Thẻ CCCD</p>
-            <p>* Nếu không có vui lòng bỏ qua bước này</p>
-            <button>Scan</button>
-        </div>
-        <div class="row">
-            <div>
-                <p>Số CCCD/CMND</p>
-                <input type="text">
-            </div>
-            <div>
-                <p>Họ tên đầy đủ</p>
-                <input type="text">
-            </div>
-            <div>
-                <p>Chụp mặt trước mặt sau</p>
-                <div>
+    <form id="frmINFO" action="" method="post">
+        <fieldset class="container">
+            <legend> Chọn giấy tờ xác minh và xác thực khuôn mặt tự động </legend>
+            <div class="container">
+                <div class="row">
+                    <label for="id_card">Chọn giấy tờ xác minh</label>
                     <div>
-                        <input type="file" id="id-front">
-                        <button>Xoá ảnh</button>
-                    </div>
-                    <div>
-                        <input type="file" id="id-back">
-                        <button>Xoá ảnh</button>
+                        <label><input type="radio" name="id_card" id="cccd" value="cccd" checked>Thẻ CCCD</label>
+                        <label><input type="radio" name="id_card" id="cmnd" value="cmnd">Thẻ CMND</label>
                     </div>
                 </div>
+                <div class="row">
+                    <label for="scan_qr">Scan mã QR Code trên Thẻ CCCD</label>
+                    <p>* Nếu không có vui lòng bỏ qua bước này</p>
+                    <button name="btnScan" id="btnScan">Scan</button>
+                </div>
+                <div class="row">
+                    <div>
+                        <p>Số CCCD/CMND</p>
+                        <input type="text" name="id_number" id="id_number">
+                    </div>
+                    <div>
+                        <p>Họ tên đầy đủ</p>
+                        <input type="text" name="full_name" id="full_name">
+                    </div>
+                    <div>
+                        <p>Chụp mặt trước mặt sau</p>
+                        <div>
+                            <div>
+                                <input type="file" name="id_front" id="id_front">
+                                <button name="btnDel" id="btnDel">Xoá ảnh</button>
+                            </div>
+                            <div>
+                                <input type="file" name="id_back" id="id_back">
+                                <button name="btnDel" id="btnDel">Xoá ảnh</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <p>Ngày tháng năm sinh</p>
+                    <input type="date" name="date_of_birth" id="date_of_birth">
+                </div>
+                <div class="row">
+                    <p>Giới tính</p>
+                    <select name="gender" id="gender">
+                        <option value="">Chọn giới tính</option>
+                        <option value="1">Nam</option>
+                        <option value="2">Nữ</option>
+                        <option value="3">Khác</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <p>Nơi cư trú</p>
+                    <input type="text" name="address" id="address">
+                </div>
+                <div class="row">
+                    <p>Tỉnh/Thành phố</p>
+                    <select name="province_live" id="province_live">
+                        <option value="">Chọn Tỉnh/Thành phố</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <p>Quận/Huyện/Thành phố</p>
+                    <select name="district" id="district">
+                        <option value="">Chọn Quận/Huyện/Thành phố</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <p>Ngày cấp</p>
+                    <input type="date" name="issue_date" id="issue_date">
+                </div>
+                <div class="row">
+                    <p>Nơi cấp</p>
+                    <input type="text" name="issuing_authority" id="issuing_authority">
+                </div>
+                <div class="row">
+                    <p>Ảnh chân dung</p>
+                    <input type="file" name="face-photo" id="face-photo">
+                    <button name="btnDel" id="btnDel">Xoá ảnh</button>
+                </div>
             </div>
+        </fieldset>
+        <fieldset class="container">
+            <legend>Điền khu vực đang làm việc & STK ngân hàng</legend>
+            <div class="container">
+                <div class="row">
+                    <p>Ngày bắt đầu làm việc</p>
+                    <input type="date" name="start_date" id="start_date">
+                </div>
+                <div class="row">
+                    <p>ID nhân viên</p>
+                    <textarea name="employee_id" id="employee_id">Random theo công thức</textarea>
+                </div>
+                <div class="row">
+                    <p>Email cá nhân</p>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="row">
+                    <p>Số điện thoại</p>
+                    <input type="number" name="phone_number" id="phone_number">
+                </div>
+                <div class="row">
+                    <p>Ca làm việc</p>
+                    <select name="workshift" id="workshift">
+                        <option value="">Chọn ca làm việc trên hệ thống</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <div>
+                        <p>Chiều cao</p>
+                        <input type="number" name="height" id="height">
+                    </div>
+                    <div>
+                        <p>Cân nặng</p>
+                        <input type="number" name="weight" id="weight">
+                    </div>
+                </div>
+                <div class="row">
+                    <p>Tỉnh/Thành phố làm việc</p>
+                    <select name="province" id="province">
+                        <option value="">Chọn tỉnh, thành phố làm việc</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <p>Tên hệ thống làm việc</p>
+                    <select name="chain" id="chain">
+                        <option value="">Chọn hệ thống làm việc</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <p>Tên siêu thị</p>
+                    <select name="supermarket" id="supermarket">
+                        <option value="">Chọn siêu thị</option>
+                    </select>
+                </div>
+                <class class="row">
+                    <div>
+                        <p>Chọn ngân hàng để nhận lương</p>
+                        <select name="bank" id="bank">
+                            <option value="">Chọn ngân hàng</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p>Số tài khoản ngân hàng</p>
+                        <input type="number" name="bank_account_number" id="bank_account_number">
+                    </div>
+                    <div>
+                        <p>Chi nhánh ngân hàng</p>
+                        <input type="text" name="bank_branch" id="bank_branch">
+                    </div>
+                </class>
+            </div>
+        </fieldset>
+        <fieldset class="container">
+            <legend>Thông tin khác</legend>
+            <div class="container">
+                <div class="row">
+                    <p>Trong trường hợp khẩn cấp, công ty có thể liên hệ với ai</p>
+                    <div>
+                        <p>Họ và tên</p>
+                        <input type="text" name="relative_name" id="relative_name">
+                    </div>
+                    <div>
+                        <p>Số điện thoại</p>
+                        <input type="text" name="relative_phone" id="relative_phone">
+                    </div>
+                    <div>
+                        <p>Quan hệ nhân thân với bạn</p>
+                        <select name="relative" id="relative">
+                            <option value="">Chọn mối quan hệ</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <input type="checkbox" name="agree" id="agree">Tôi xin xác nhận những thông tin trên là
+                        đúng sự thật. Và nếu có sự khai man thông tin trong
+                        "Hồ sơ Nhân viên" này, tôi xin hoàn toàn chịu trách
+                        nhiệm dưới hình thức sa thải và không bất kỳ sự khiếu
+                        kiện gì.
+                    </div>
+                    <div>
+                        <p>Chữ ký:</p>
+                        <canvas id="canvas-sign" width="400%"></canvas>
+                    </div>
+                    <p>Ngày điền thông tin: 15/03/2024</p>
+                </div>
+            </div>
+        </fieldset>
+
+        <div class="container">
+            <input type="submit" name="btnSend" id="btnSend" value="Send"></input>
         </div>
-        <div class="row">
-            <p>Ngày tháng năm sinh</p>
-            <input type="date">
-        </div>
-        <div class="row">
-            <p>Giới tính</p>
-            <select name="gender" id="gender">
-                <option value="">Chọn giới tính</option>
-                <option value="1">Nam</option>
-                <option value="2">Nữ</option>
-                <option value="3">Khác</option>
-            </select>
-        </div>
-        <div class="row">
-            <p>Nơi cư trú</p>
-            <input type="text">
-        </div>
-        <div class="row">
-            <p>Tỉnh/Thành phố</p>
-            <select name="province" id="province">
-                <option value="">Chọn Tỉnh/Thành phố</option>
-            </select>
-        </div>
-        <div class="row">
-            <p>Tỉnh/Thành phố</p>
-            <select name="district" id="district">
-                <option value="">Chọn Quận/Huyện/Thành phố</option>
-            </select>
-        </div>
-        <div class="row">
-            <p>Ngày cấp</p>
-            <input type="date">
-        </div>
-        <div class="row">
-            <p>Nơi cấp</p>
-            <input type="text">
-        </div>
-        <div class="row">
-            <p>Tải ảnh lên</p>
-            <input type="file" id="face-photo">
-            <button>Xoá ảnh</button>
-        </div>
-        <a href="work_location_information_and_bank.html">Tiếp tục</a>
-    </div>
+    </form>
+
 </body>
 
 </html>

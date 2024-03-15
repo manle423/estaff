@@ -22,7 +22,10 @@ body {
 }
 
 .row input[type="text"],
-.row input[type="password"] {
+.row input[type="password"],
+.row input[type="number"],
+.row input[type="email"],
+.row input[type="date"] {
     width: 100%;
     padding: 10px;
     border-radius: 5px;
@@ -30,16 +33,32 @@ body {
     box-sizing: border-box;
 }
 
-.row input[type="submit"]{
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.row input[type="submit"] {
     width: 100%;
     padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+    background: #4caf50;
+    color: #fff;
 }
 
-.row input[type="submit"] {
+.container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
     background: #4caf50;
     color: #fff;
 }
@@ -51,5 +70,36 @@ body {
 
 .text-center {
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
+#canvas-sign {
+    size: 50px 50px;
+    border: 1px solid #ccc;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    display: flex;
+}
+
+legend {
+    font-weight: bold;
+    padding: 5px;
+}
+
+#agree {
+    margin-right: 10px;
+}
+
+select {
+    width: 400px;
+}
+
+*{
+    font-family: "Nunito", sans-serif;
+}
