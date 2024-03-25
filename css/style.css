@@ -38,6 +38,7 @@ input.browser-default.search-field {
 }
 .col-sm-12 {
     padding-left: 1.5rem !important;
+    margin-top: 5px;
     padding-right: 1.5rem 
 rem
  !important;
@@ -316,4 +317,122 @@ a.btn.btn-info {
 .testimonial-carousel .owl-dot.active {
     background: var(--dark);
     border-color: var(--primary);
+}
+.body{
+    font-size: 14px;
+    padding: 15px;
+}
+.board{
+    height: 100%;
+    max-width: 100%;
+    background-color: #fff;
+    float: none;
+    box-shadow: none;
+}
+.list.ng-star-inserted {
+    padding-left: 20px;
+    float: left;
+    width: 300px;
+    height: 550px;
+}
+ul.team-members {
+    padding-left: 0;
+    list-style-type: none;
+}
+.board .list .project{
+    margin: 0;
+    padding: .875rem;
+    list-style: none;
+}
+.project-action{
+    text-align: right;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+}
+h4.project-title {
+    color: #191C24;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    line-height: 1.2;
+}
+.project:not(.project-list-add){
+    padding-right: 2rem;
+}
+.project{
+    cursor: pointer;
+    list-style: none;
+    padding: 1rem;
+    background: #ffffff;
+    transition: box-shadow .2s;
+    min-height: 50px;
+    position: relative;
+    margin-bottom: 24px;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+}
+.pro-left{
+    font-weight: 500;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+.mb-2{
+    margin-bottom: .5rem !important;
+}
+.col-7{
+    flex: 0 0 auto;
+    width: 58.33333333%;
+}
+.row{
+    margin-bottom: 0 !important;
+}
+.row{
+--bs-gutter-x: 1.5rem;
+--bs-gutter-y: 0;
+ display: flex;
+ flex-wrap: wrap;
+ margin-top: calc(-1* var(--bs-gutter-y));
+margin-right: calc(-.5* var(--bs-gutter-x));
+margin-left: calc(-.5* var(--bs-gutter-x));
+}
+select.form-select.user.mb-3 {
+    margin-left: 260px;
+    width: 250px;
+    background-color: #72dbf1;
+    margin-top: -44px;
+    height: 44px;
+}
+select.form-select.user-role.mb-3 {
+    margin-left: 519px;
+    width: 250px;
+    background-color: #72dbf1;
+    margin-top: -59px;
+    height: 44px;
+}
+button.btn.btn-success.user {
+    margin-right: 20px;
+    border-radius: 100px;
+    float: right;
+    margin-top: -55px;
+    margin-left: 780px;
+}
+.badge {
+    font-weight: 500 !important;
+}
+
+.bg-inverse-info {
+    background-color: rgba(2, 182, 179, 0.12) !important;
+    color: #1db9aa !important;
+}
+.badge {
+    font-weight: 500 !important;
+}
+
+.bg-inverse-danger {
+    background-color: rgba(242, 17, 54, 0.12) !important;
+    color: #e63c3c !important;
+}
+.dropdown.filter.dropdown-action {
+    float: left;
+    margin-right: 30px;
 }

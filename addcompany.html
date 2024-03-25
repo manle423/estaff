@@ -47,14 +47,14 @@
                 <div class="navbar-nav w-100">
                     <a href="index.html" class="nav-item nav-link "><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>SYSTEM</a>
+                        <a href="#" class="nav-link active dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Company</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="company.html" class="dropdown-item">Company/Project</a>
-                            <a href="accountEmployee.html" class="dropdown-item">Account employee</a>
+                            <a href="company.html" class="dropdown-item">All company</a>
+                            <a href="addcompany.html" class="dropdown-item">Add company</a>
                             <a href="" class="dropdown-item"></a>
                         </div>
                     </div>
-                    <a href="profile.html" class="nav-item nav-link active"><i class="fa fa-th me-2"></i>Employee</a>
+                    <a href="profile.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Employee</a>
                     <a href="account.html" class="nav-item nav-link"><i class="fa fa-user-edit me-2"></i>Account</a>
                     <a href="project.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Project</a>
                     <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
@@ -96,13 +96,13 @@
          <form action="#">
             <div class="add-employee">
             <div class="container-fluid pt-4 px-4">
-                <h3 class="page-title">Add new employee</h3>
+                <h3 class="page-title">Add Company</h3>
                 <div class="row g-4">
              <div class="col-sm-12 col-xl-6">
                 <div class="bg-secondary-info rounded h-100 p-4">
-                    <h6 class="mb-4">Information</h6>
+                    <h6 class="mb-4">Basic info</h6>
                     <div class="mb-3">
-                        <input type="text" name="username" class="form-control" placeholder="Username" aria-label="Username"
+                        <input type="text" name="username" class="form-control" placeholder="Company name" aria-label="Username"
                             aria-describedby="basic-addon1">
                     </div>
                     <div class=" mb-3">
@@ -110,60 +110,16 @@
                             aria-describedby="basic-addon1">
                     </div>
                     <div class=" mb-3">
-                        <input type="text" name="mobile" class="form-control" placeholder="Mobile" aria-label="Mobile"
+                        <input type="text" name="mobile" class="form-control" placeholder="Phone number" aria-label="Mobile"
                             aria-describedby="basic-addon1">
                     </div>
                     <div class=" mb-3">
-                        <input type="text" name="height" class="form-control" placeholder="Height" aria-label="height"
-                            aria-describedby="basic-addon1">
+                        <input type="text" name="date-of-birth" class="form-control" placeholder="Create" aria-label="bankname"
+                            aria-describedby="basic-addon1">    
                     </div>
-                    <div class=" mb-3">
-                        <input type="text" name="Weight" class="form-control" placeholder="Weight" aria-label="weight"
-                            aria-describedby="basic-addon1">
-                    </div>
-                </div>
-                </div>
-                
-                <div class="col-sm-12 col-xl-6">
-                    <div class="bg-secondary-info rounded h-100 p-4">
-                        <h6 class="mb-4">Information</h6>
-                        <div class=" mb-3">
-                            <input type="text" name="date-of-birth" class="form-control" placeholder="Date of birth" aria-label="bankname"
-                                aria-describedby="basic-addon1">
-                                
-                        </div>
-                        <div class=" mb-3">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="Male" id="inlineRadio1"
-                                    value="option1">
-                                <label class="form-check-label" for="inlineRadio1">Male</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="Female" id="inlineRadio2"
-                                    value="option2">
-                                <label class="form-check-label" for="inlineRadio2">Female</label>
-                            </div>
-                        </div>
-                        <div class=" mb-3">
-                            <select class="form-select mb-3" aria-label="Default select example">
-                                <option selected>Hometown</option>
-                                <option value="1">HCM</option>
-                                <option value="2">Hà Nội</option>
-                                <option value="3">Vũng Tàu</option>
-                            </select>
-                        </div>
-                        <div class=" mb-3">
-                            <input type="text" name="bankbranch" class="form-control" placeholder="Place of residence" aria-label="bankbranch"
-                                aria-describedby="basic-addon1">
-                        </div>
-                        </div>
-            </div>
-            <div class="col-sm-12 col-xl-6">
-                <div class="bg-secondary-info rounded h-100 p-4">
-                    <h6 class="mb-4">Information</h6>
                     <div class=" mb-3">
                         <select class="form-select mb-3" aria-label="Default select example">
-                            <option selected>Temporary residence city/province</option>
+                            <option selected>Location</option>
                             <option value="1">HCM</option>
                             <option value="2">Hà Nội</option>
                             <option value="3">Vũng Tàu</option>
@@ -171,90 +127,136 @@
                     </div>
                     <div class=" mb-3">
                         <select class="form-select mb-3" aria-label="Default select example">
-                            <option selected>Temporary residence district</option>
-                            <option value="1">Quận 1</option>
-                            <option value="2">Quận 2</option>
-                            <option value="3">Quận 3</option>
+                            <option selected>Owner</option>
+                            <option value="1">Hi hi</option>
+                            <option value="2">Ha ha</option>
+                            <option value="3">Hu hu</option>
                         </select>
                     </div>
-                    <div class="mb-3">
-                        <label for="formFile" class="form-label">Face image</label>
-                        <input class="form-control bg-dark-info" type="file" id="formFile">
-                    </div>
-                    
-                    <div class="mb-3">
-                        <label for="formFile" class="form-label">Image of work participation </label>
-                        <input class="form-control bg-dark-info" type="file" id="formFile">
-                    </div>
-                    </div>
-        </div>
+                </div>
+                </div>
                 <div class="col-sm-12 col-xl-6">
                     <div class="bg-secondary-info rounded h-100 p-4">
-                        <h6 class="mb-4">Info CCCD</h6>
-                        <div class="mb-3">
-                            <input type="text" name="CCCDnumber" class="form-control" placeholder="CCCD Number" aria-label="Username"
+                        <h6 class="mb-4">Social profile</h6>
+                        <div class=" mb-3">
+                            <input type="text" name="height" class="form-control" placeholder="Fax" aria-label="height"
                                 aria-describedby="basic-addon1">
                         </div>
                         <div class=" mb-3">
-                            <input type="text" name="email" class="form-control" placeholder="Date of issue" aria-label="email"
+                            <input type="text" name="height" class="form-control" placeholder="Facebook" aria-label="height"
                                 aria-describedby="basic-addon1">
                         </div>
+                       
                         <div class=" mb-3">
-                            <input type="text" name="mobile" class="form-control" placeholder="Place of issue" aria-label="Mobile"
+                            <input type="text" name="Weight" class="form-control" placeholder="Tags" aria-label="weight"
                                 aria-describedby="basic-addon1">
                         </div>
-                        <div class="mb-3">
-                            <label for="formFile" class="form-label">CCCD front image</label>
-                            <input class="form-control bg-dark-info" type="file" id="formFile">
-                        </div>
-                        <div class="mb-3">
-                            <label for="formFile" class="form-label">CCCD back image</label>
-                            <input class="form-control bg-dark-info" type="file" id="formFile">
-                        </div>
-                    </div>
-                    </div>
-                <div class="col-sm-12 col-xl-6">
-                    <div class="bg-secondary-info rounded h-100 p-4">
-                        <h6 class="mb-4">Bank</h6>
+                       
                         <div class=" mb-3">
-                            <input type="text" name="bankname" class="form-control" placeholder="Bank name" aria-label="bankname"
-                                aria-describedby="basic-addon1">
-                        </div>
-                        <div class=" mb-3">
-                            <input type="text" name="bankaccount" class="form-control" placeholder="Bank Account number" aria-label="bankaccount"
-                                aria-describedby="basic-addon1">
-                        </div>
-                        <div class=" mb-3">
-                            <input type="text" name="bankbranch" class="form-control" placeholder="Bank branch" aria-label="bankbranch"
+                            <input type="text" name="height" class="form-control" placeholder="Website" aria-label="height"
                                 aria-describedby="basic-addon1">
                         </div>
                         </div>
             </div>
             <div class="col-sm-12 col-xl-6">
                 <div class="bg-secondary-info rounded h-100 p-4">
-                    <h6 class="mb-4">personal relations</h6>
+                    <h6 class="mb-4">Shift</h6>
                     <div class=" mb-3">
-                        <input type="text" name="name_of_relative" class="form-control" placeholder="Name of relative" aria-label="bankname"
+                        <select class="form-select mb-3" aria-label="Default select example">
+                            <option selected>Select project</option>
+                            <option value="1">Project 1</option>
+                            <option value="2">Project 2</option>
+                            <option value="3">Project 3</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" name="" class="form-control" placeholder="Shift code" aria-label="Username"
                             aria-describedby="basic-addon1">
                     </div>
-                    <div class=" mb-3">
-                        <input type="text" name="number_of_relative" class="form-control" placeholder="Number of relative" aria-label="bankaccount"
+                    
+                    <div class="mb-3">
+                        <input type="text" name="" class="form-control" placeholder="Shift" aria-label="Username"
                             aria-describedby="basic-addon1">
                     </div>
+                   
+                    </div>
+        </div>
+                <div class="col-sm-12 col-xl-6">
+                    <div class="bg-secondary-info rounded h-100 p-4">
+                        <h6 class="mb-4">Work point</h6>
+                        <div class="mb-3">
+                            <select class="form-select mb-3" aria-label="Default select example">
+                                <option selected>Select province/city</option>
+                                <option value="1">HCM</option>
+                                <option value="2">Hà Nội</option>
+                                <option value="3">Vũng Tàu</option>
+                            </select>
+                        </div>
+                        <div class=" mb-3">
+                            <input type="text" name="email" class="form-control" placeholder="Supermarket system" aria-label="email"
+                                aria-describedby="basic-addon1">
+                        </div>
+                        <div class=" mb-3">
+                            <input type="text" name="email" class="form-control" placeholder="Supermarket name" aria-label="email"
+                                aria-describedby="basic-addon1">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" name="email" class="form-control" placeholder="Supermarket address" aria-label="email"
+                                aria-describedby="basic-addon1">
+                        </div>
+                       
+                    </div>
+                    </div>
+                <div class="col-sm-12 col-xl-6">
+                    <div class="bg-secondary-info rounded h-100 p-4">
+                        <h6 class="mb-4">Bank</h6>
+                        <div class=" mb-3">
+                            <select class="form-select mb-3" aria-label="Default select example">
+                                <option selected>Select bank</option>
+                                <option value="1">Vietcombank</option>
+                                <option value="2">Aribank</option>
+                                <option value="3">BIDV</option>
+                            </select>
+                        </div>     
+                     </div>
+                     </div>
+            <div class="col-sm-12 col-xl-6">
+                <div class="bg-secondary-info rounded h-100 p-4">
+                    <h6 class="mb-4">Status</h6>
                     <div class=" mb-3">
-                        <input type="text" name="personal_relations" class="form-control" placeholder="Personal relations" aria-label="bankbranch"
-                            aria-describedby="basic-addon1">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Active" id="inlineRadio1"
+                                value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Active</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="private" id="inlineRadio2"
+                                value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Private</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inactive" id="inlineRadio2"
+                                value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Inactive</label>
+                        </div>
                     </div>
                     </div>
             </div>
-       
+            <div class="col-sm-12">
+                <div class="bg-secondary-info rounded h-100 p-4">
+                    <h6 class="mb-4">About company</h6>     
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+                    </div>
+                </div>
+            </div>
          </div>
-          </div>  
+          
           <div class="m-n2">
             <button type="button" class="btn btn-primary rounded-pill m-2">Cancel</button>
             <button type="button" class="btn btn-info rounded-pill m-2">Submit</button>
             </div>
-        </div>
+      
          </form>
              <!-- Content end -->
             <!-- Footer Start -->

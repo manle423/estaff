@@ -50,12 +50,12 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Company</a>
                         <div class="dropdown-menu bg-transparent border-0">
                             <a href="company.html" class="dropdown-item">All company</a>
-                            <a href="accountEmployee.html" class="dropdown-item">Add company</a>
+                            <a href="addcompany.html" class="dropdown-item">Add company</a>
                             <a href="" class="dropdown-item"></a>
                         </div>
                     </div>
-                    <a href="profile.html" class="nav-item nav-link active"><i class="fa fa-th me-2"></i>Employee</a>
-                    <a href="account.html" class="nav-item nav-link"><i class="fa fa-user-edit me-2"></i>Account</a>
+                    <a href="profile.html" class="nav-item nav-link "><i class="fa fa-th me-2"></i>Employee</a>
+                    <a href="account.html" class="nav-item nav-link active"><i class="fa fa-user-edit me-2"></i>Account</a>
                     <a href="project.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Project</a>
                     <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
                    
@@ -92,21 +92,29 @@
 
             <div class="row align-items-center">
                 <div class="col">
-                    <h3 class="page-title">Profile</h3>
+                    <h3 class="page-title">User</h3>
                     <ul class="breadcrumb">
-                     
                         <li class="tbl-search-box">
-                            <label for="search-input">
-                                <i  class="material-icon search-icon"></i>
-                            </label>
                             <input placeholder="Name" type="text" aria-label="Search box" class="browser-default search-field" >
+                            <select class="form-select user mb-3" aria-label="Default select example">
+                                <option selected>Open this select company</option>
+                                <option value="1">Coffee</option>
+                                <option value="2">Milk</option>
+                                <option value="3">Tea</option>
+                            </select>
+                            <select class="form-select user-role mb-3" aria-label="Default select example">
+                                <option selected>Open this select role </option>
+                                <option value="1">Coffee</option>
+                                <option value="2">Milk</option>
+                                <option value="3">Tea</option>
+                            </select>
+                            <button type="button" class="btn btn-success user"> <img src="img/search.png" alt="" style="width: 20px; height: 20px;"> </i></button>
                         </li>
+                       
                     </ul>
                 </div>
-               
                 <div class="col-auto float-end ms-auto">
-                    
-                    <a href="createProfile.html" class="btn btn-info" role="button">Add employee</a>
+                    <a href="createProfile.html" class="btn btn-info" role="button">Add User</a>
                 </div>
             </div>
             <div class="row">
@@ -114,34 +122,28 @@
                     <table class="table table-striped custom-table employee-table mb-0 datatable dataTable no-footer" id="DataTable_Table_0" role="grid" aria-describedby="DataTable_Table_0_info">
                         <thead>
                             <tr role="row">
-                                <th tabindex="0" aria-controls="DataTable_Table_0" rowspan="1" colspan="1" style="width: 20.037px;"><input class="form-check-input" type="checkbox"></th>
-                                <th class="sorting_asc" tabindex="0" aria-controls="DataTable_Table_0" rowspan="1" colspan="1" style="width: 70.037px;">ID</th>
-                                <th class="sorting_asc" tabindex="0" aria-controls="DataTable_Table_0" rowspan="1" colspan="1" style="width: 121.037px;">Full name</th>
-                                <th class="sorting_asc" tabindex="0" aria-controls="DataTable_Table_0" rowspan="1" colspan="1" style="width: 100.037px;">Date of birth</th>
-                                <th class="sorting_asc" tabindex="0" aria-controls="DataTable_Table_0" rowspan="1" colspan="1" style="width: 115.037px;">Email</th>
-                                <th class="sorting_asc" tabindex="0" aria-controls="DataTable_Table_0" rowspan="1" colspan="1" style="width: 70.066px;">Gender</th>
-                                <th class="sorting_asc" tabindex="0" aria-controls="DataTable_Table_0" rowspan="1" colspan="1" style="width: 90.077px;">Mobie</th>
-                                <th class="sorting_asc" tabindex="0" aria-controls="DataTable_Table_0" rowspan="1" colspan="1" style="width: 100.037px;">HomeTown</th>
-                                <th class="sorting_asc" tabindex="0" aria-controls="DataTable_Table_0" rowspan="1" colspan="1" style="width: 135.037px;">Action</th>
+                                <th class="sorting_asc" tabindex="0" aria-controls="DataTable_Table_0" rowspan="1" colspan="1" style="width: 600.037px;">Name</th>
+                                <th class="sorting_asc" tabindex="0" aria-controls="DataTable_Table_0" rowspan="1" colspan="1" style="width: 540.037px;">Email</th>
+                                <th class="sorting_asc" tabindex="0" aria-controls="DataTable_Table_0" rowspan="1" colspan="1" style="width: 590.066px;">Company</th>
+                                <th class="sorting_asc" tabindex="0" aria-controls="DataTable_Table_0" rowspan="1" colspan="1" style="width: 430.077px;">Create Date</th>
+                                <th class="sorting_asc" tabindex="0" aria-controls="DataTable_Table_0" rowspan="1" colspan="1" style="width: 360.037px;">Role</th>
+                                <th class="sorting_asc" tabindex="0" aria-controls="DataTable_Table_0" rowspan="1" colspan="1" style="width: 155.037px;">Action</th>
                             </tr>
                         </thead>
-                        <tbody role="odd">
-                            <td><input class="form-check-input" type="checkbox"></td>
-                            <td class="sorting_1"> 12345</td>
-                            <td> Nguyen van a</td>
-                            <td>02/03/2002</td>
+                        <tbody role="odd">         
+                            <td> Nguyen van a</td>    
                             <td>nguyena@gmail.com</td>
-                            <td>nam</td>
-                            <td>0987654321</td>
-                            <td>Hà Nội</td>
+                            <td>Coffee</td>
+                            <td>2/2/2022</td>
+                            <td>
+                                <span class="badge bg-inverse-info">Admin</span>
+                            </td>
                             <td class="dropdown dropdown-action" >
                                 <a href="" data-bs-toggle="dropdown" aria-expanded="false">
                                     <img src="img/three.png" alt="" style="width: 20px; height: 20px;"> </i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" style>
-                                    <a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#view">
-                                        <img src="img/user.png" alt="" style="width: 20px; height: 20px;"> </i> View
-                                    </a>
+                                    
                                     <a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#edit">
                                         <img src="img/edit-profile-vector-icon.jpg" alt="" style="width: 20px; height: 20px;"> </i> Edit
                                     </a>
@@ -151,23 +153,21 @@
                                 </div>
                             </td>
                        </tbody>
-                        <tbody role="odd">
-                            <td><input class="form-check-input" type="checkbox"></td>
-                            <td class="sorting_1"> 12345</td>
-                            <td> Nguyen van a</td>
-                            <td>02/03/2002</td>
+                        <!-- -->   
+                        <tbody role="odd">         
+                            <td> Nguyen van a</td>    
                             <td>nguyena@gmail.com</td>
-                            <td>nam</td>
-                            <td>0987654321</td>
-                            <td>Hà Nội</td>
+                            <td>Coffee</td>
+                            <td>2/2/2022</td>
+                            <td>
+                                <span class="badge bg-inverse-danger">Client</span>
+                            </td>
                             <td class="dropdown dropdown-action" >
                                 <a href="" data-bs-toggle="dropdown" aria-expanded="false">
                                     <img src="img/three.png" alt="" style="width: 20px; height: 20px;"> </i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" style>
-                                    <a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#view">
-                                        <img src="img/user.png" alt="" style="width: 20px; height: 20px;"> </i> View
-                                    </a>
+                                    
                                     <a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#edit">
                                         <img src="img/edit-profile-vector-icon.jpg" alt="" style="width: 20px; height: 20px;"> </i> Edit
                                     </a>
@@ -176,25 +176,22 @@
                                     </a>
                                 </div>
                             </td>
-                        </tbody>
-                         <!-- -->
-                         <tbody role="odd">
-                            <td><input class="form-check-input" type="checkbox"></td>
-                            <td class="sorting_1"> 12345</td>
-                            <td> Nguyen van a</td>
-                            <td>02/03/2002</td>
+                       </tbody>
+                        <!-- -->   
+                        <tbody role="odd">         
+                            <td> Nguyen van a</td>    
                             <td>nguyena@gmail.com</td>
-                            <td>nam</td>
-                            <td>0987654321</td>
-                            <td>Hà Nội</td>
+                            <td>Coffee</td>
+                            <td>2/2/2022</td>
+                            <td>
+                                <span class="badge bg-inverse-info">Admin</span>
+                            </td>
                             <td class="dropdown dropdown-action" >
                                 <a href="" data-bs-toggle="dropdown" aria-expanded="false">
                                     <img src="img/three.png" alt="" style="width: 20px; height: 20px;"> </i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" style>
-                                    <a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#view">
-                                        <img src="img/user.png" alt="" style="width: 20px; height: 20px;"> </i> View
-                                    </a>
+                                   
                                     <a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#edit">
                                         <img src="img/edit-profile-vector-icon.jpg" alt="" style="width: 20px; height: 20px;"> </i> Edit
                                     </a>
@@ -203,25 +200,22 @@
                                     </a>
                                 </div>
                             </td>
-                        </tbody>
-                         <!-- -->
-                         <tbody role="odd">
-                            <td><input class="form-check-input" type="checkbox"></td>
-                            <td class="sorting_1"> 12345</td>
-                            <td> Nguyen van a</td>
-                            <td>02/03/2002</td>
+                       </tbody>
+                        <!-- -->   
+                        <tbody role="odd">         
+                            <td> Nguyen van a</td>    
                             <td>nguyena@gmail.com</td>
-                            <td>nam</td>
-                            <td>0987654321</td>
-                            <td>Hà Nội</td>
+                            <td>Coffee</td>
+                            <td>2/2/2022</td>
+                            <td>
+                                <span class="badge bg-inverse-danger">Client</span>
+                            </td>
                             <td class="dropdown dropdown-action" >
                                 <a href="" data-bs-toggle="dropdown" aria-expanded="false">
                                     <img src="img/three.png" alt="" style="width: 20px; height: 20px;"> </i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" style>
-                                    <a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#view">
-                                        <img src="img/user.png" alt="" style="width: 20px; height: 20px;"> </i> View
-                                    </a>
+                                  
                                     <a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#edit">
                                         <img src="img/edit-profile-vector-icon.jpg" alt="" style="width: 20px; height: 20px;"> </i> Edit
                                     </a>
@@ -230,25 +224,22 @@
                                     </a>
                                 </div>
                             </td>
-                        </tbody>
-                         <!-- -->
-                         <tbody role="odd">
-                            <td><input class="form-check-input" type="checkbox"></td>
-                            <td class="sorting_1"> 12345</td>
-                            <td> Nguyen van a</td>
-                            <td>02/03/2002</td>
+                       </tbody>
+                        <!-- -->   
+                        <tbody role="odd">         
+                            <td> Nguyen van a</td>    
                             <td>nguyena@gmail.com</td>
-                            <td>nam</td>
-                            <td>0987654321</td>
-                            <td>Hà Nội</td>
+                            <td>Coffee</td>
+                            <td>2/2/2022</td>
+                            <td>
+                                <span class="badge bg-inverse-info">Admin</span>
+                            </td>
                             <td class="dropdown dropdown-action" >
                                 <a href="" data-bs-toggle="dropdown" aria-expanded="false">
                                     <img src="img/three.png" alt="" style="width: 20px; height: 20px;"> </i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" style>
-                                    <a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#view">
-                                        <img src="img/user.png" alt="" style="width: 20px; height: 20px;"> </i> View
-                                    </a>
+                                   
                                     <a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#edit">
                                         <img src="img/edit-profile-vector-icon.jpg" alt="" style="width: 20px; height: 20px;"> </i> Edit
                                     </a>
@@ -257,52 +248,22 @@
                                     </a>
                                 </div>
                             </td>
-                        </tbody>
-                         <!-- -->
-                         <tbody role="odd">
-                            <td><input class="form-check-input" type="checkbox"></td>
-                            <td class="sorting_1"> 12345</td>
-                            <td> Nguyen van a</td>
-                            <td>02/03/2002</td>
+                       </tbody>
+                        <!-- -->   
+                        <tbody role="odd">         
+                            <td> Nguyen van a</td>    
                             <td>nguyena@gmail.com</td>
-                            <td>nam</td>
-                            <td>0987654321</td>
-                            <td>Hà Nội</td>
+                            <td>Coffee</td>
+                            <td>2/2/2022</td>
+                            <td>
+                                <span class="badge bg-inverse-danger">Client</span>
+                            </td>
                             <td class="dropdown dropdown-action" >
                                 <a href="" data-bs-toggle="dropdown" aria-expanded="false">
                                     <img src="img/three.png" alt="" style="width: 20px; height: 20px;"> </i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" style>
-                                    <a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#view">
-                                        <img src="img/user.png" alt="" style="width: 20px; height: 20px;"> </i> View
-                                    </a>
-                                    <a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#edit">
-                                        <img src="img/edit-profile-vector-icon.jpg" alt="" style="width: 20px; height: 20px;"> </i> Edit
-                                    </a>
-                                    <a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#detele">
-                                        <img src="img/delete.jpg" alt="" style="width: 20px; height: 20px;"> </i>  Delete 
-                                    </a>
-                                </div>
-                            </td>  
-                        </tbody>
-                        <!-- -->
-                        <tbody role="odd">
-                            <td><input class="form-check-input" type="checkbox"></td>
-                            <td class="sorting_1"> 12345</td>
-                            <td> Nguyen van a</td>
-                            <td>02/03/2002</td>
-                            <td>nguyena@gmail.com</td>
-                            <td>nam</td>
-                            <td>0987654321</td>
-                            <td>Hà Nội</td>
-                            <td class="dropdown dropdown-action" >
-                                <a href="" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="img/three.png" alt="" style="width: 20px; height: 20px;"> </i>
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right" style>
-                                    <a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#view">
-                                        <img src="img/user.png" alt="" style="width: 20px; height: 20px;"> </i> View
-                                    </a>
+                                   
                                     <a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#edit">
                                         <img src="img/edit-profile-vector-icon.jpg" alt="" style="width: 20px; height: 20px;"> </i> Edit
                                     </a>
@@ -311,25 +272,22 @@
                                     </a>
                                 </div>
                             </td>
-                        </tbody>
-                        <!-- -->
-                        <tbody role="odd">
-                            <td><input class="form-check-input" type="checkbox"></td>
-                            <td class="sorting_1"> 12345</td>
-                            <td> Nguyen van a</td>
-                            <td>02/03/2002</td>
+                       </tbody>
+                        <!-- -->   
+                        <tbody role="odd">         
+                            <td> Nguyen van a</td>    
                             <td>nguyena@gmail.com</td>
-                            <td>nam</td>
-                            <td>0987654321</td>
-                            <td>Hà Nội</td>
+                            <td>Coffee</td>
+                            <td>2/2/2022</td>
+                            <td>
+                                <span class="badge bg-inverse-info">Admin</span>
+                            </td>
                             <td class="dropdown dropdown-action" >
                                 <a href="" data-bs-toggle="dropdown" aria-expanded="false">
                                     <img src="img/three.png" alt="" style="width: 20px; height: 20px;"> </i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" style>
-                                    <a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#view">
-                                        <img src="img/user.png" alt="" style="width: 20px; height: 20px;"> </i> View
-                                    </a>
+                                  
                                     <a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#edit">
                                         <img src="img/edit-profile-vector-icon.jpg" alt="" style="width: 20px; height: 20px;"> </i> Edit
                                     </a>
@@ -337,26 +295,23 @@
                                         <img src="img/delete.jpg" alt="" style="width: 20px; height: 20px;"> </i>  Delete 
                                     </a>
                                 </div>
-                            </td> 
-                        </tbody>
-                        <!-- -->
-                        <tbody role="odd">
-                            <td><input class="form-check-input" type="checkbox"></td>
-                            <td class="sorting_1"> 12345</td>
-                            <td> Nguyen van a</td>
-                            <td>02/03/2002</td>
+                            </td>
+                       </tbody>
+                        <!-- -->   
+                        <tbody role="odd">         
+                            <td> Nguyen van a</td>    
                             <td>nguyena@gmail.com</td>
-                            <td>nam</td>
-                            <td>0987654321</td>
-                            <td>Hà Nội</td>
+                            <td>Coffee</td>
+                            <td>2/2/2022</td>
+                            <td>
+                                <span class="badge bg-inverse-danger">Client</span>
+                            </td>
                             <td class="dropdown dropdown-action" >
                                 <a href="" data-bs-toggle="dropdown" aria-expanded="false">
                                     <img src="img/three.png" alt="" style="width: 20px; height: 20px;"> </i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" style>
-                                    <a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#view">
-                                        <img src="img/user.png" alt="" style="width: 20px; height: 20px;"> </i> View
-                                    </a>
+                                   
                                     <a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#edit">
                                         <img src="img/edit-profile-vector-icon.jpg" alt="" style="width: 20px; height: 20px;"> </i> Edit
                                     </a>
@@ -364,26 +319,23 @@
                                         <img src="img/delete.jpg" alt="" style="width: 20px; height: 20px;"> </i>  Delete 
                                     </a>
                                 </div>
-                            </td> 
-                        </tbody>
-                        <!-- -->
-                        <tbody role="odd">
-                            <td><input class="form-check-input" type="checkbox"></td>
-                            <td class="sorting_1"> 12345</td>
-                            <td> Nguyen van a</td>
-                            <td>02/03/2002</td>
+                            </td>
+                       </tbody>
+                        <!-- -->   
+                        <tbody role="odd">         
+                            <td> Nguyen van a</td>    
                             <td>nguyena@gmail.com</td>
-                            <td>nam</td>
-                            <td>0987654321</td>
-                            <td>Hà Nội</td>
+                            <td>Coffee</td>
+                            <td>2/2/2022</td>
+                            <td>
+                                <span class="badge bg-inverse-info">Admin</span>
+                            </td>
                             <td class="dropdown dropdown-action" >
                                 <a href="" data-bs-toggle="dropdown" aria-expanded="false">
                                     <img src="img/three.png" alt="" style="width: 20px; height: 20px;"> </i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" style>
-                                    <a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#view">
-                                        <img src="img/user.png" alt="" style="width: 20px; height: 20px;"> </i> View
-                                    </a>
+                                    
                                     <a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#edit">
                                         <img src="img/edit-profile-vector-icon.jpg" alt="" style="width: 20px; height: 20px;"> </i> Edit
                                     </a>
@@ -391,8 +343,31 @@
                                         <img src="img/delete.jpg" alt="" style="width: 20px; height: 20px;"> </i>  Delete 
                                     </a>
                                 </div>
-                            </td> 
-                        </tbody>
+                            </td>
+                       </tbody>
+                        <!-- -->   
+                        <tbody role="odd">         
+                            <td> Nguyen van a</td>    
+                            <td>nguyena@gmail.com</td>
+                            <td>Coffee</td>
+                            <td>2/2/2022</td>
+                            <td>
+                                <span class="badge bg-inverse-danger">Client</span>
+                            </td>
+                            <td class="dropdown dropdown-action" >
+                                <a href="" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="img/three.png" alt="" style="width: 20px; height: 20px;"> </i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" style>
+                                    <a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#edit">
+                                        <img src="img/edit-profile-vector-icon.jpg" alt="" style="width: 20px; height: 20px;"> </i> Edit
+                                    </a>
+                                    <a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#detele">
+                                        <img src="img/delete.jpg" alt="" style="width: 20px; height: 20px;"> </i>  Delete 
+                                    </a>
+                                </div>
+                            </td>
+                       </tbody>
                         <!-- -->   
                     </table>
                 </div>
