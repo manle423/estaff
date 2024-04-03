@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estaff</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <form id="frmINFO" action="" method="post">
+        <fieldset class="container">
+            <legend> PERSONAL INFORMATION </legend>
+            <div class="container">
+                <div class="row">
+                    <label for="id_card">Select identity card</label>
+                    <div>
+                        <label><input type="radio" name="id_card" id="cccd" value="cccd" checked>CCCD</label>
+                        <label><input type="radio" name="id_card" id="cmnd" value="cmnd">CMND</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="scan_qr">Scan QR Code</label>
+                    <p>* If not, please skip this step</p>
+                    <button name="btnScan" id="btnScan">Scan</button>
+                </div>
+                <div class="row">
+                    <div>
+                        <p>Take front and back photos of your citizen identity card</p>
+                        <div>
+                            <div>
+                                <input type="file" name="id_front" id="id_front">
+                                <button name="btnDel" id="btnDel">Delete image</button>
+                            </div>
+                            <div>
+                                <input type="file" name="id_back" id="id_back">
+                                <button name="btnDel" id="btnDel">Delete image</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <p>ID number</p>
+                        <input type="text" name="id_number" id="id_number">
+                    </div>
+                    <div>
+                        <p>Full name</p>
+                        <input type="text" name="full_name" id="full_name">
+                    </div>
+                </div>
+                <div class="row">
+                    <p>Date of birth</p>
+                    <input type="date" name="date_of_birth" id="date_of_birth">
+                </div>
+                <div class="row">
+                    <p>Gender</p>
+                    <select name="gender" id="gender">
+                        <option value="">Choose your gender</option>
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                        <option value="3">Other</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <p>Native place</p>
+                    <input type="text" name="native_place" id="native_place">
+                </div>
+                <div class="row">
+                    <p>Place of residence</p>
+                    <input type="text" name="address" id="address">
+                </div>
+                <div class="row">
+                    <p>Issuance date</p>
+                    <input type="date" name="issue_date" id="issue_date">
+                </div>
+                <div class="row">
+                    <p>Issuing Authority</p>
+                    <input type="text" name="issuing_authority" id="issuing_authority">
+                </div>
+                <div class="row">
+                    <input type="checkbox" name="chkConfirm" id="chkConfirm">I confirm that the information above is
+                    correct.
+                    <div class="row">
+                        <p>Face capture instruction</p>
+                        <button name="btnOK" id="btnOK">I understand</button>
+                    </div>
+                    <div class="row">
+                        <p>Portrait</p>
+                        <input type="file" name="Portrait" id="Portrait">
+                        <button name="btnDel" id="btnDel">Delete image</button>
+                    </div>
+                </div>
+        </fieldset>
+        <fieldset class="container">
+            <legend>INFORMATION ABOUT WORK</legend>
+            <div class="container">
+                <div class="row">
+                    <p>Start date</p>
+                    <input type="date" name="start_date" id="start_date">
+                </div>
+                <div class="row">
+                    <p>Employee's ID</p>
+                    <textarea name="employee_id" id="employee_id">Random theo công thức</textarea>
+                </div>
+                <div class="row">
+                    <p>Email</p>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="row">
+                    <p>Phone number</p>
+                    <input type="number" name="phone_number" id="phone_number">
+                </div>
+                <div class="row">
+                    <p>Place of residence</p>
+                    <select name="residence" id="residence" onchange="showAddressFields()">
+                        <option value="">Choose your place of residence</option>
+                        <option value="1">According to ID card</option>
+                        <option value="2">Fill in the address</option>
+                    </select>
+                </div>
+                <div id="addressFields" style="display: none;">
+                    <p>Province</p>
+                    <select name="province_live" id="province_live">
+                        <option value="">Select province</option>
+                    </select>
+                    <p>District</p>
+                    <select name="district" id="district">
+                        <option value="">Select district</option>
+                    </select>
+                    <p>Adress</p>
+                    <input type="text" name="address" id="address">
+                </div>
+                <div class="row">
+                    <p>Shift</p>
+                    <select name="workshift" id="workshift">
+                        <option value="">Choose shift</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <div>
+                        <p>Height</p>
+                        <input type="number" name="height">m
+                        <input type="number" name="height">cm
+                    </div>
+                    <div>
+                        <p>Weight</p>
+                        <input type="number" name="weight" id="weight">kg
+                    </div>
+                </div>
+                <div class="row">
+                    <p>Province city of work</p>
+                    <input type="text" id="searchProvince" oninput="searchProvince()" placeholder="Choose province...">
+                    <select name="province" id="province">
+                        <option value="">Choose province</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <p>Work system</p>
+                    <input type="text" id="searchSystem" oninput="searchSystem()" placeholder="Choose system...">
+                    <select name="chain" id="chain">
+                        <option value="">Choose system</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <p>Supermarket</p>
+                    <input type="text" id="searchSupermarket" oninput="searchSupermarket()"
+                        placeholder="Choose supermarket...">
+                    <select name="supermarket" id="supermarket">
+                        <option value="">Choose supermarket</option>
+                    </select>
+                </div>
+
+                <class class="row">
+                    <div>
+                        <p>Choose a bank to receive salary</p>
+                        <input type="text" id="searchBank" oninput="searchBank()" placeholder="Choose bank...">
+                        <select name="bank" id="bank">
+                            <option value="">Choose bank</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p>Enter your bank account number</p>
+                        <input type="number" name="bank_account_number" id="bank_account_number">
+                    </div>
+                    <div>
+                        <p>Bank branch</p>
+                        <input type="text" name="bank_branch" id="bank_branch">
+                    </div>
+                </class>
+            </div>
+        </fieldset>
+        <fieldset class="container">
+            <legend>ADDITIONAL INFORMATION</legend>
+            <div class="container">
+                <div class="row">
+                    <input type="file" name="work_img" id="work_img">Work image you took part in
+                </div>
+                <div class="row">
+                    <p>In case of emergency, who can the company contact?</p>
+                    <div>
+                        <p>Full name</p>
+                        <input type="text" name="relative_name" id="relative_name">
+                    </div>
+                    <div>
+                        <p>Phone number</p>
+                        <input type="text" name="relative_phone" id="relative_phone">
+                    </div>
+                    <div>
+                        <p>Have relationship with</p>
+                        <select name="relative" id="relative">
+                            <option value="">Chọn mối quan hệ</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <input type="checkbox" name="agree" id="agree">Tôi xin xác nhận những thông tin trên là
+                        đúng sự thật. Và nếu có sự khai man thông tin trong
+                        "Hồ sơ Nhân viên" này, tôi xin hoàn toàn chịu trách
+                        nhiệm dưới hình thức sa thải và không bất kỳ sự khiếu
+                        kiện gì.
+                    </div>
+                    <div>
+                        <p>Signature</p>
+                        <canvas id="canvas-sign" width="400%"></canvas>
+                    </div>
+                    <p>Date of filling out information: xx/xx/xxxx</p>
+                </div>
+            </div>
+        </fieldset>
+
+        <div class="container">
+            <input type="submit" name="btnSend" id="btnSend" value="Send"></input>
+        </div>
+    </form>
+
+</body>
+
+</html>
+
+<script>
+    function showAddressFields() {
+        var selectBox = document.getElementById("residence");
+        var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+        var addressFields = document.getElementById("addressFields");
+
+        if (selectedValue === "2") {
+            addressFields.style.display = "block";
+        } else {
+            addressFields.style.display = "none";
+        }
+    }
+
+    function searchProvince() {
+        var input, filter, select, option, i;
+        input = document.getElementById('searchProvince');
+        filter = input.value.toUpperCase();
+        select = document.getElementById("province");
+        option = select.getElementsByTagName('option');
+        for (i = 0; i < option.length; i++) {
+            if (option[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                option[i].style.display = "";
+            } else {
+                option[i].style.display = "none";
+            }
+        }
+    }
+
+    function searchSystem() {
+        var input, filter, select, option, i;
+        input = document.getElementById('searchSystem');
+        filter = input.value.toUpperCase();
+        select = document.getElementById("chain");
+        option = select.getElementsByTagName('option');
+        for (i = 0; i < option.length; i++) {
+            if (option[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                option[i].style.display = "";
+            } else {
+                option[i].style.display = "none";
+            }
+        }
+    }
+
+    function searchSupermarket() {
+        var input, filter, select, option, i;
+        input = document.getElementById('searchSupermarket');
+        filter = input.value.toUpperCase();
+        select = document.getElementById("supermarket");
+        option = select.getElementsByTagName('option');
+        for (i = 0; i < option.length; i++) {
+            if (option[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                option[i].style.display = "";
+            } else {
+                option[i].style.display = "none";
+            }
+        }
+    }
+
+    function searchBank() {
+        var input, filter, select, option, i;
+        input = document.getElementById('searchBank');
+        filter = input.value.toUpperCase();
+        select = document.getElementById("bank");
+        option = select.getElementsByTagName('option');
+        for (i = 0; i < option.length; i++) {
+            if (option[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                option[i].style.display = "";
+            } else {
+                option[i].style.display = "none";
+            }
+        }
+    }
+
+</script>
